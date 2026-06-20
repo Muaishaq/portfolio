@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 // Navbar component - Fixed navigation with desktop and mobile views
@@ -88,14 +89,22 @@ const Navbar = () => {
             ))}
           </ul>
           
-          {/* CTA Button */}
-          <a
-            href="#contact"
-            className={styles.ctaButton}
-            onClick={(e) => handleLinkClick(e, '#contact')}
-          >
-            Hire Me
-          </a>
+          {/* CTA Buttons */}
+          <div className={styles.ctaButtons}>
+            <Link
+              to="/card"
+              className={styles.profileCardButton}
+            >
+              Profile Card
+            </Link>
+            <a
+              href="#contact"
+              className={styles.ctaButton}
+              onClick={(e) => handleLinkClick(e, '#contact')}
+            >
+              Hire Me
+            </a>
+          </div>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -137,14 +146,26 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile CTA Button */}
-        <a
-          href="#contact"
-          className={styles.mobileCta}
-          onClick={(e) => handleLinkClick(e, '#contact')}
-        >
-          Hire Me
-        </a>
+        {/* Mobile CTA Buttons */}
+        <div className={styles.mobileCtaButtons}>
+          <Link
+            to="/card"
+            className={styles.mobileCta}
+            onClick={toggleMobileMenu}
+          >
+            Profile Card
+          </Link>
+          <a
+            href="#contact"
+            className={styles.mobileCta}
+            onClick={(e) => {
+              handleLinkClick(e, '#contact');
+              toggleMobileMenu();
+            }}
+          >
+            Hire Me
+          </a>
+        </div>
       </div>
     </nav>
   );

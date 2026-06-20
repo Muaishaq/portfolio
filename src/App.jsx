@@ -11,7 +11,7 @@ import Certifications from './components/Certifications';
 import Interests from './components/Interests';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ProfileCard from './components/ProfileCard';
+import CardEmbed from './components/CardEmbed';
 
 function App() {
   return (
@@ -37,8 +37,8 @@ function App() {
           }
         />
         
-        {/* Standalone profile card route */}
-        <Route path="/card" element={<ProfileCard />} />
+        {/* Standalone profile card route - embedded via iframe */}
+        <Route path="/card" element={<CardEmbed />} />
       </Routes>
     </div>
   );

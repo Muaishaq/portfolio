@@ -1,0 +1,38 @@
+/* CardEmbed.module.css - Styles for profile card iframe embed */
+
+.card-embed-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  padding: 2rem;
+}
+
+.card-iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 600px;
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 245, 196, 0.1);
+  background: var(--bg-card);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-embed-container {
+    padding: 1rem;
+  }
+
+  .card-iframe {
+    height: 550px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-iframe {
+    height: 500px;
+  }
+}

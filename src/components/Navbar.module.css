@@ -98,6 +98,35 @@
   border-radius: 1px;
 }
 
+/* CTA Buttons Container */
+.ctaButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Profile Card Button */
+.profileCardButton {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.profileCardButton:hover {
+  background: rgba(0, 245, 196, 0.1);
+  color: var(--neon-cyan);
+  border-color: var(--border-active);
+  transform: translateY(-2px);
+}
+
 /* CTA Button */
 .ctaButton {
   font-family: var(--font-body);
@@ -233,6 +262,14 @@
 .mobileCta:hover {
   background: var(--neon-cyan);
   color: var(--bg-primary);
+}
+
+/* Mobile CTA Buttons Container */
+.mobileCtaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 /* Responsive Design */
