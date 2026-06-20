@@ -10,6 +10,7 @@ import Leadership from './components/Leadership';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Interests from './components/Interests';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
       
       {/* Interests section */}
       <Interests />
+      
+      {/* Contact section */}
+      <Contact />
       
       {/* Other sections will be added here in later phases */}
     </div>
