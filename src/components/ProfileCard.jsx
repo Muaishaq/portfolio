@@ -67,7 +67,12 @@ const ProfileCard = () => {
         <a href="#projects" className={styles.primaryButton}>
           See My Work
         </a>
-        <a href="#contact" className={styles.secondaryButton}>
+        <a
+          href="https://linkedin.com/in/muaishaq"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.secondaryButton}
+        >
           Hire Me
         </a>
         <a
