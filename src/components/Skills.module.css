@@ -1,0 +1,215 @@
+/* Skills.module.css - Skills section styles */
+/* 6 skill cards with animated progress bars and color-coded tags */
+
+.skills {
+  background: var(--bg-primary);
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Section header */
+.header {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--neon-cyan);
+  border-radius: 1px;
+}
+
+/* Responsive grid for 6 skill cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Skill card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-active);
+  box-shadow: 0 8px 24px rgba(0, 245, 196, 0.1);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Skill bar with animation */
+.skillBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skillBarBackground {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-card-hover);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skillBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue));
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+
+.percentage {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  min-width: 3rem;
+  text-align: right;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Tag color variants */
+.tagCyan {
+  background: rgba(0, 245, 196, 0.1);
+  color: var(--neon-cyan);
+  border: 1px solid rgba(0, 245, 196, 0.2);
+}
+
+.tagPurple {
+  background: rgba(123, 92, 240, 0.1);
+  color: var(--neon-purple);
+  border: 1px solid rgba(123, 92, 240, 0.2);
+}
+
+.tagBlue {
+  background: rgba(0, 196, 245, 0.1);
+  color: var(--neon-blue);
+  border: 1px solid rgba(0, 196, 245, 0.2);
+}
+
+.tagGray {
+  background: rgba(107, 122, 153, 0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(107, 122, 153, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .skillBarContainer {
+    gap: 0.75rem;
+  }
+
+  .percentage {
+    font-size: 0.85rem;
+    min-width: 2.5rem;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
