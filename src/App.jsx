@@ -3,6 +3,7 @@
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       
       {/* Hero section */}
       <Hero />
+      
+      {/* About section */}
+      <About />
       
       {/* Other sections will be added here in later phases */}
     </div>
