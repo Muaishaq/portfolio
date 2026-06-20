@@ -1,0 +1,162 @@
+/* ProfileCard.module.css - Profile Card component styles */
+/* Dark-futuristic design per SPEC.md section 16 */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 8px 32px rgba(0, 245, 196, 0.15);
+}
+
+/* Photo container with cyan border ring */
+.photoContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.profilePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 245, 196, 0.3);
+  display: block;
+}
+
+/* Name */
+.name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Title */
+.title {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  margin: 0;
+  text-align: center;
+}
+
+/* Bio */
+.bio {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
+}
+
+/* Social links */
+.socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socialLink {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: var(--neon-cyan);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.primaryButton,
+.secondaryButton {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.primaryButton {
+  background: var(--neon-cyan);
+  color: var(--bg-primary);
+  border: 1px solid var(--neon-cyan);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 245, 196, 0.3);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+}
+
+.secondaryButton:hover {
+  background: rgba(0, 245, 196, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 375px) {
+  .card {
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .bio {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    gap: 0.5rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}

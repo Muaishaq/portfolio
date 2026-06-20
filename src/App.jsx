@@ -1,6 +1,5 @@
-// App.jsx - Main application component
-// This will be populated with sections in later phases
-
+// App.jsx - Main application component with routing
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,43 +10,36 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Interests from './components/Interests';
 import Contact from './components/Contact';
+import ProfileCard from './components/ProfileCard';
 
 function App() {
   return (
     <div className="app">
-      {/* Navbar component */}
-      <Navbar />
-      
-      {/* Hero section */}
-      <Hero />
-      
-      {/* About section */}
-      <About />
-      
-      {/* Skills section */}
-      <Skills />
-      
-      {/* Projects section */}
-      <Projects />
-      
-      {/* Leadership section */}
-      <Leadership />
-      
-      {/* Education & Experience section */}
-      <Education />
-      
-      {/* Certifications section */}
-      <Certifications />
-      
-      {/* Interests section */}
-      <Interests />
-      
-      {/* Contact section */}
-      <Contact />
-      
-      {/* Other sections will be added here in later phases */}
+      {/* Main portfolio route */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Hero />
+              <About />
+              <Skills />
+              <Projects />
+              <Leadership />
+              <Education />
+              <Certifications />
+              <Interests />
+              <Contact />
+            </>
+          }
+        />
+        
+        {/* Standalone profile card route */}
+        <Route path="/card" element={<ProfileCard />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
