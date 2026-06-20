@@ -10,6 +10,7 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Interests from './components/Interests';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import ProfileCard from './components/ProfileCard';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               <Certifications />
               <Interests />
               <Contact />
+              <Footer />
             </>
           }
         />
