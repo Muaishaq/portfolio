@@ -1,0 +1,203 @@
+/* Certifications.module.css - Certifications section styles */
+/* 8 certification cards with verified badges and credential links */
+
+.certifications {
+  background: var(--bg-primary);
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Section header */
+.header {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem 0;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--neon-cyan);
+  border-radius: 1px;
+}
+
+/* Certification cards grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Certification card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-active);
+  box-shadow: 0 8px 24px rgba(0, 245, 196, 0.1);
+}
+
+/* Verified badge */
+.verifiedBadge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 24px;
+  height: 24px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--bg-primary);
+  box-shadow: 0 0 12px rgba(0, 245, 196, 0.3);
+}
+
+/* Certification name */
+.certName {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+  padding-right: 2rem;
+}
+
+/* Issuer */
+.issuer {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Date */
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Skills */
+.skills {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Credential link */
+.credentialLink {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.credentialLink:hover {
+  color: var(--neon-blue);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .certifications {
+    padding: 4rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .certName {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .certifications {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .certName {
+    font-size: 0.95rem;
+  }
+
+  .verifiedBadge {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+}

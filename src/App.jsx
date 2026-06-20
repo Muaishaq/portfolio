@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Leadership from './components/Leadership';
 import Education from './components/Education';
+import Certifications from './components/Certifications';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
       
       {/* Education & Experience section */}
       <Education />
+      
+      {/* Certifications section */}
+      <Certifications />
       
       {/* Other sections will be added here in later phases */}
     </div>
