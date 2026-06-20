@@ -1,0 +1,344 @@
+/* Projects.module.css - Projects section styles */
+/* Featured TechTrust card + 5 regular project cards in grid */
+
+.projects {
+  background: var(--bg-secondary);
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Section header */
+.header {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--neon-cyan);
+  border-radius: 1px;
+}
+
+/* Featured TechTrust card - full width, 2-col layout */
+.featuredCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.featuredCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+}
+
+.featuredContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 245, 196, 0.1);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  align-self: flex-start;
+}
+
+.badgeIcon {
+  font-size: 1rem;
+}
+
+/* Featured title */
+.featuredTitle {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.featuredDescription {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Stack */
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.stackLabel {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.stackValue {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+/* Label */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* GitHub link */
+.githubLink {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.githubLink:hover {
+  color: var(--neon-blue);
+}
+
+/* ASCII architecture panel - hides on mobile */
+.architecturePanel {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.architecture {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: var(--neon-cyan);
+  margin: 0;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Regular project cards - auto-fit grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-active);
+  box-shadow: 0 8px 24px rgba(0, 245, 196, 0.1);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Year badge */
+.yearBadge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 245, 196, 0.1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+}
+
+/* Card title */
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cardStack {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.cardLink {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.cardLink:hover {
+  color: var(--neon-blue);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .featuredCard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .architecturePanel {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 4rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .featuredCard {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .projects {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .featuredCard {
+    padding: 1.25rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+}
