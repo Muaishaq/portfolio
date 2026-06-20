@@ -12,8 +12,8 @@
 
 .card-iframe {
   width: 100%;
-  max-width: 500px;
-  height: 600px;
+  max-width: 400px;
+  height: 500px;
   border: none;
   border-radius: var(--radius-lg);
   box-shadow: 0 8px 32px rgba(0, 245, 196, 0.1);
@@ -27,12 +27,18 @@
   }
 
   .card-iframe {
-    height: 550px;
+    height: 480px;
   }
 }
 
 @media (max-width: 480px) {
   .card-iframe {
-    height: 500px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-iframe {
+    height: 420px;
   }
 }
