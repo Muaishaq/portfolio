@@ -1,0 +1,311 @@
+/* Hero.module.css - Hero section styles */
+/* Full viewport height with grid-dot background, blurred orbs, animations */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 64px 2rem 4rem;
+  overflow: hidden;
+}
+
+/* Background effects */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* Grid-dot background - SPEC.md section 2.3 */
+.gridDots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(0, 245, 196, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+}
+
+/* Blurred orbs */
+.orbCyan {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+}
+
+.orbPurple {
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 350px;
+  height: 350px;
+  background: var(--neon-purple);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+}
+
+/* Content container */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Pill badge with pulsing dot */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 245, 196, 0.1);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  animation: fadeUp 0.6s ease 0.1s forwards;
+  opacity: 0;
+  align-self: flex-start;
+}
+
+.pulsingDot {
+  width: 8px;
+  height: 8px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Name with cyan glow on "Ishaq" */
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  animation: fadeUp 0.6s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.firstName {
+  color: var(--text-primary);
+  display: block;
+}
+
+.lastName {
+  color: var(--neon-cyan);
+  display: block;
+  text-shadow: 0 0 30px rgba(0, 245, 196, 0.3);
+}
+
+/* Subtitle in JetBrains Mono */
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0;
+  animation: fadeUp 0.6s ease 0.3s forwards;
+  opacity: 0;
+}
+
+/* Body paragraph */
+.description {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0;
+  animation: fadeUp 0.6s ease 0.4s forwards;
+  opacity: 0;
+}
+
+/* CTA Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.primaryButton,
+.secondaryButton {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primaryButton {
+  background: var(--neon-cyan);
+  color: var(--bg-primary);
+  border: 1px solid var(--neon-cyan);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 245, 196, 0.3);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+}
+
+.secondaryButton:hover {
+  background: rgba(0, 245, 196, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Stats row */
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s ease 0.6s forwards;
+  opacity: 0;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNumber {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .badge,
+  .name,
+  .subtitle,
+  .description,
+  .buttons,
+  .stats {
+    animation: none;
+    opacity: 1;
+  }
+
+  .pulsingDot {
+    animation: none;
+  }
+
+  .primaryButton:hover,
+  .secondaryButton:hover {
+    transform: none;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 64px 1.5rem 3rem;
+  }
+
+  .orbCyan {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orbPurple {
+    width: 200px;
+    height: 200px;
+  }
+
+  .stats {
+    gap: 1.5rem;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    padding: 64px 1rem 2rem;
+  }
+
+  .stats {
+    gap: 1rem;
+  }
+
+  .statNumber {
+    font-size: 1.25rem;
+  }
+
+  .statLabel {
+    font-size: 0.75rem;
+  }
+}
