@@ -23,15 +23,15 @@
 /* Photo container with cyan border ring */
 .photoContainer {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
 }
 
 .profilePhoto {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 30%;
   border-radius: 50%;
   border: 2px solid var(--neon-cyan);
   box-shadow: 0 0 20px rgba(0, 245, 196, 0.3);
