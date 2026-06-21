@@ -18,7 +18,7 @@ const ProfileCard = () => {
       <h2 className={styles.name}>Muhammed Ishaq</h2>
 
       {/* Title */}
-      <p className={styles.title}>AI Engineer & Full-Stack Developer</p>
+      <p className={styles.title}>AI/ML Engineer & Full-Stack Developer, and Computer Scientist</p>
 
       {/* Bio */}
       <p className={styles.bio}>
